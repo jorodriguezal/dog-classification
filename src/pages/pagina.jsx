@@ -20,13 +20,19 @@ const [index, setIndex] = useState(0);
         let respuesta = pregunta.respuestas.find((respuesta) => respuesta.id === id);
         respuesta.elimina.forEach((raza) => {
           let indice = arreglo.indexOf(raza);
-          arreglo.splice(indice, 1);
+          //si indice =-1 no existe el elemento no hace nada
+            if (indice !== -1){
+                arreglo.splice(indice, 1);
+            }
+          
+
         });
         setIndex(index + 1);
         console.log(arreglo);
       };
     
       useEffect(() => {
+        
         setPregunta(preguntas[index]);
       }, [index]);
       

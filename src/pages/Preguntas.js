@@ -37,9 +37,89 @@ const preguntas = [
             },
             { id: "2", texto: "No", elimina: [] },
         ],
-    }
-                  
-    
-]
+    },
+    {
+        pregunta:"¿Alguien de tu familia sufre algún tipo de alergia al pelo?",
+        respuestas: [
+            { id: "1", texto: "Sí", elimina:[
+                "Pastor alemán",
+                "Doberman",
+                "Boyero de berna",
+                "Rottweiler",
+                "Akita",
+                "San Bernardo",
+                "Terranova",
+                "Samoyedo",
+                "Labrador retriever",
+                "Golden retriever",
+                "Border collie",
+                "Pastor Collie",
+                "Siberian Husky"
+              ]},
+            { id: "2", texto: "No", elimina:[]},
+        ],     
+    },
+    {
+        pregunta:"¿Cuantas horas libres posees al día?",
+        respuestas: [
+            { id: "1", texto: "Menos de 3 horas", elimina:[
+                "Pastor alemán",
+                "Doberman",
+                "Boyero de berna",
+                "Rottweiler",
+                "Akita",
+                "San Bernardo",
+                "Terranova",
+                "Samoyedo",
+                "Labrador retriever",
+                "Golden retriever",
+                "Border collie",
+                "Pastor Collie",
+                "Siberian Husky"
+              ] },
+            { id: "2", texto: "Entre 3 y 5 horas", elimina:[
+                "Pastor alemán",
+                "Doberman",
+                "Boyero de berna",
+                "Rottweiler",
+                "Akita",
+                "San Bernardo",
+                "Terranova",
+                "Border collie",
+                "Pastor Collie"
+              ]
+               },
+            { id: "3", texto: "Más de 5 horas", elimina:[] },
+        ],
+    },
+    {
+        pregunta:"¿Realiza algún tipo de ejercicio al aire libre (correr, trotar, patinaje…)? ",
+        respuestas: [
+            { id: "1", texto: "Sí", elimina:[]},
+            { id: "2", texto: "No", elimina:[]},
+        ],
+    },
+    {
+        pregunta:"¿Que buscas al tener un perro en la casa?",
+        respuestas: [
+            { id: "1", texto: "Cariño", elimina:[]},
+            { id: "2", texto: "Compañía", elimina:[]},
+            { id: "3", texto: "Protección", elimina:[
+                "Bulldog Inglés",
+                "Cocker Spaniel",
+                "Bulldog francés",
+                "Beagle",
+                "Perro salchicha",
+                "Schnauzer",
+                "Yorkshire",
+                "Pomerania",
+                "Shih tzu"
+              ]
+              },
+        ],
+    },
+
+]; 
+              
 
 export default preguntas;
