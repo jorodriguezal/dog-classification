@@ -8,6 +8,11 @@ let arreglo =[
     "Labrador retriever", "Golden retriever", "Border collie","Pastor Collie","Siberian Husky","Bulldog Inglés","Cocker Spaniel",
     "Bulldog francés","Beagle","Perro salchicha","Schnauzer","Yorkshire","Pomerania","Shih tzu", "Pug" ];
     
+    let arregloJSON = arreglo.map(raza => {
+        return { raza: raza, página: "1" };
+      });
+      
+      console.log(arregloJSON);
 const Pagina = () => {
 const [index, setIndex] = useState(0);
 
