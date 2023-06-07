@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dog-classification/static/css/main.6d75c23f.css",
+    "main.js": "/dog-classification/static/js/main.de2f269a.js",
+    "static/js/679.e864be0d.chunk.js": "/dog-classification/static/js/679.e864be0d.chunk.js",
+    "static/js/787.c2505166.chunk.js": "/dog-classification/static/js/787.c2505166.chunk.js",
+    "static/media/Rottweiler.jpg": "/dog-classification/static/media/Rottweiler.77fffceb6f109a12f530.jpg",
+    "static/media/Doberman.jpg": "/dog-classification/static/media/Doberman.4cdf58f66f08cccc9a07.jpg",
+    "static/media/Beagle.jpg": "/dog-classification/static/media/Beagle.fe0cc698f70b6df85724.jpg",
+    "static/media/Perro salchicha.jpg": "/dog-classification/static/media/Perro salchicha.1a1b0df5b07e0bec26e4.jpg",
+    "static/media/Yorkshire.jpg": "/dog-classification/static/media/Yorkshire.b4687df6a165ee2b7dcf.jpg",
+    "static/media/logo.svg": "/dog-classification/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/dog-classification/index.html",
+    "main.6d75c23f.css.map": "/dog-classification/static/css/main.6d75c23f.css.map",
+    "main.de2f269a.js.map": "/dog-classification/static/js/main.de2f269a.js.map",
+    "679.e864be0d.chunk.js.map": "/dog-classification/static/js/679.e864be0d.chunk.js.map",
+    "787.c2505166.chunk.js.map": "/dog-classification/static/js/787.c2505166.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d75c23f.css",
+    "static/js/main.de2f269a.js"
+  ]
+}
