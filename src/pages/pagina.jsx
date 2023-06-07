@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Flickity from 'react-flickity-component'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import preguntas from "./Preguntas";
+import preguntas from "./Preguntas"; 
 
 let arreglo = [
   { raza: "Pastor alemán", página: "1" },
@@ -31,12 +31,7 @@ let arreglo = [
   { raza: "Shih tzu", página: "1" },
   { raza: "Pug", página: "1" }
 ];
-    
-    let arregloJSON = arreglo.map(raza => {
-        return { raza: raza, página: "1" };
-      });
       
-      console.log(arregloJSON);
 const Pagina = () => {
 const [index, setIndex] = useState(0);
 const [mostrarPerros, setMostrarPerros] = useState(false);
@@ -48,7 +43,9 @@ const [mostrarPerros, setMostrarPerros] = useState(false);
         let pregunta = preguntas[index];
         let respuesta = pregunta.respuestas.find((respuesta) => respuesta.id === id);
         respuesta.elimina.forEach((raza) => {
-          let indice = arreglo.indexOf(raza);
+          //obtiene en el arreglo el índice del objeto con raza: raza
+            let indice = arreglo.findIndex((objeto) => objeto.raza === raza);
+
           //si indice =-1 no existe el elemento no hace nada
             if (indice !== -1){
                 arreglo.splice(indice, 1);
@@ -77,7 +74,6 @@ return (
     <div>   
         <h1>Titulo</h1>
         <p>Descripción de lo que se hace </p>
-
         {mostrarPerros ? (
             <div>
                 <Resultado />
@@ -121,7 +117,6 @@ const Resultado = () => {
         <div>
             <div>
                 <h1>Perros que se acoplan a ti:</h1>
-                
                 <Flickity
                     className={'carousel'}
                     elementType={'div'}
@@ -138,18 +133,17 @@ const Resultado = () => {
                     reloadOnUpdate
                     static
                 >
-                    {arreglo.map(({raza, pagina}) => (
-                        <div key={raza}>
-                          <Card sx={{ maxWidth: 500 }}>
+                    {arreglo.map(({raza, página}) => (
+                        <div key={raza} style={{ height: "500px", width:"400px"}}>
+                          <Card sx={{ width: "100%", height: "100%" }}>
                             <CardHeader title={raza} />
                             <CardContent>
-                              <img src={"https://placedog.net/500/280?id=" + raza} alt={raza} />
+                              <img src={require("../assets/img/" + raza + ".jpg")} alt={raza} style={{ width: "", height: "auto" }} />
                               <Typography variant="body2" color="text.secondary">
-                                {pagina}
                               </Typography>
                             </CardContent>
                             <CardActions>
-                              <Button size="small">Aprende más sobre esta raza</Button>
+                              <Button size="small">Aprende más sobre esta raza en la página {página}</Button>
                             </CardActions>
                           </Card>
                         </div>
