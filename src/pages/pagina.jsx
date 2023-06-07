@@ -32,6 +32,11 @@ let arreglo = [
   { raza: "Pug", página: "1" }
 ];
     
+    let arregloJSON = arreglo.map(raza => {
+        return { raza: raza, página: "1" };
+      });
+      
+      console.log(arregloJSON);
 const Pagina = () => {
 const [index, setIndex] = useState(0);
 const [mostrarPerros, setMostrarPerros] = useState(false);

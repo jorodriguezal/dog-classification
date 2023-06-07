@@ -2,7 +2,7 @@ const preguntas = [
     {
         pregunta: "¿De cuantos metros cuadrados es tu vivienda?",
         respuestas: [
-            { id: "1", texto: "45 m2", elimina: [
+            { id: "1", texto: "menos de 45 m2", elimina: [
                 "Pastor alemán",
                 "Doberman",
                 "Boyero de berna",
