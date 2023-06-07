@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Typography,Card,CardContent, Button, CardHeader, CardActions } from "@mui/material";
+import { Typography,Card,CardContent, Button, CardHeader, CardActions, Toolbar } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Flickity from 'react-flickity-component'
@@ -71,15 +71,26 @@ const [mostrarPerros, setMostrarPerros] = useState(false);
 
 
 return (
-    <div>   
-        <h1>Titulo</h1>
+    <div style={{backgroundColor:"white"}}>   
+        <Toolbar
+            sx={{
+                display: "flex",
+                backgroundColor: "#45CF5E",
+                color: "#000000",
+                textAlign: "center",
+            }}>
+            <Typography variant="h4" component="div"> No tiene nombre </Typography>
+            </Toolbar>
+          
+        
+  
         <p>Descripción de lo que se hace </p>
         {mostrarPerros ? (
             <div>
                 <Resultado />
             </div>
         ) : (
-            <Card sx={{ minWidth: 275 }}>
+            <Card sx={{ minWidth: 275, backgroundColor:"#E5FEEA" }}>
                 <CardHeader title={"Pregunta " + (index+1) + " de 6 "} />
                     <CardContent>
                         <Typography variant="body2" color="text.secondary">
@@ -87,10 +98,9 @@ return (
                         </Typography>
                         <br />
                         {pregunta.respuestas.map((respuesta) => (
-                            <Button sx={{m:"20px"   }}
+                            <Button  variant="outlined"  sx={{m:"20px"  ,color:"#45CF5E" ,borderColor:"#45CF5E"}}
                                 key={respuesta.id}
-                                variant="contained"
-                                onClick={() => seleccionar(respuesta.id)}
+                                    onClick={() => seleccionar(respuesta.id)}
                             >
                                 {respuesta.texto}
                             </Button>
