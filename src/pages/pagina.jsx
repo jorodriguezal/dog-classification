@@ -7,29 +7,29 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import preguntas from "./Preguntas"; 
 
 let arreglo = [
-  { raza: "Pastor alemán", página: "1" },
-  { raza: "Doberman", página: "1" },
-  { raza: "Boyero de berna", página: "1" },
-  { raza: "Rottweiler", página: "1" },
-  { raza: "Akita", página: "1" },
-  { raza: "San Bernardo", página: "1" },
-  { raza: "Terranova", página: "1" },
-  { raza: "Samoyedo", página: "1" },
-  { raza: "Labrador retriever", página: "1" },
-  { raza: "Golden retriever", página: "1" },
-  { raza: "Border collie", página: "1" },
-  { raza: "Pastor Collie", página: "1" },
-  { raza: "Siberian Husky", página: "1" },
-  { raza: "Bulldog Inglés", página: "1" },
-  { raza: "Cocker Spaniel", página: "1" },
-  { raza: "Bulldog francés", página: "1" },
-  { raza: "Beagle", página: "1" },
-  { raza: "Perro salchicha", página: "1" },
-  { raza: "Schnauzer", página: "1" },
-  { raza: "Yorkshire", página: "1" },
-  { raza: "Pomerania", página: "1" },
-  { raza: "Shih tzu", página: "1" },
-  { raza: "Pug", página: "1" }
+  { raza: "Pastor alemán", página: "9" },
+  { raza: "Doberman", página: "10" },
+  { raza: "Boyero de berna", página: "11" },
+  { raza: "Rottweiler", página: "12" },
+  { raza: "Akita", página: "13" },
+  { raza: "San Bernardo", página: "14" },
+  { raza: "Terranova", página: "15" },
+  { raza: "Samoyedo", página: "16" },
+  { raza: "Labrador retriever", página: "18" },
+  { raza: "Golden retriever", página: "19" },
+  { raza: "Border collie", página: "21" },
+  { raza: "Pastor Collie", página: "20" },
+  { raza: "Siberian Husky", página: "22" },
+  { raza: "Bulldog Inglés", página: "23" },
+  { raza: "Cocker Spaniel", página: "25" },
+  { raza: "Bulldog francés", página: "24" },
+  { raza: "Beagle", página: "27" },
+  { raza: "Perro salchicha", página: "28" },
+  { raza: "Schnauzer", página: "32" },
+  { raza: "Yorkshire", página: "31" },
+  { raza: "Pomerania", página: "29" },
+  { raza: "Shih tzu", página: "30" },
+  { raza: "Pug", página: "33" }
 ];
       
 const Pagina = () => {
@@ -79,12 +79,13 @@ return (
                 color: "#000000",
                 textAlign: "center",
             }}>
-            <Typography variant="h4" component="div"> No tiene nombre </Typography>
+            <Typography variant="h4" component="div"> Personalidades Perrunas</Typography>
             </Toolbar>
           
         
   
-        <p>Descripción de lo que se hace </p>
+        <p>Resuelve las siguientes preguntas para descubrir cual(es) son las razas de 
+            perros que más se acomoden a tu estilo de vida </p>
         {mostrarPerros ? (
             <div>
                 <Resultado />

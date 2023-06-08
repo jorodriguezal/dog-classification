@@ -96,7 +96,22 @@ const preguntas = [
         pregunta:"¿Realiza algún tipo de ejercicio al aire libre (correr, trotar, patinaje…)? ",
         respuestas: [
             { id: "1", texto: "Sí", elimina:[]},
-            { id: "2", texto: "No", elimina:[]},
+            { id: "2", texto: "No", elimina:[
+                "Pastor alemán",
+                "Doberman",
+                "Boyero de berna",
+                "Rottweiler",
+                "Akita",
+                "San Bernardo",
+                "Terranova",
+                "Samoyedo",
+                "Labrador retriever",
+                "Golden retriever",
+                "Border collie",
+                "Pastor Collie",
+                "Siberian Husky"
+              ]
+              },
         ],
     },
     {
