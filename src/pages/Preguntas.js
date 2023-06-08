@@ -1,6 +1,6 @@
 const preguntas = [
     {
-        pregunta: "¿De cuantos metros cuadrados es tu vivienda?",
+        pregunta: "¿De cuántos metros cuadrados es tu vivienda?",
         respuestas: [
             { id: "1", texto: "menos de 45 m2", elimina: [
                 "Pastor alemán",
@@ -60,7 +60,7 @@ const preguntas = [
         ],     
     },
     {
-        pregunta:"¿Cuantas horas libres posees al día?",
+        pregunta:"¿Cuántas horas libres posees al día?",
         respuestas: [
             { id: "1", texto: "Menos de 3 horas", elimina:[
                 "Pastor alemán",
@@ -93,7 +93,7 @@ const preguntas = [
         ],
     },
     {
-        pregunta:"¿Realiza algún tipo de ejercicio al aire libre (correr, trotar, patinaje…)? ",
+        pregunta:"¿Realizas algún tipo de ejercicio al aire libre (correr, trotar, patinaje…)? ",
         respuestas: [
             { id: "1", texto: "Sí", elimina:[]},
             { id: "2", texto: "No", elimina:[
@@ -115,7 +115,7 @@ const preguntas = [
         ],
     },
     {
-        pregunta:"¿Que buscas al tener un perro en la casa?",
+        pregunta:"¿Qué buscas al tener un perro en casa?",
         respuestas: [
             { id: "1", texto: "Cariño", elimina:[]},
             { id: "2", texto: "Compañía", elimina:[]},
