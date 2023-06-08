@@ -67,7 +67,35 @@ const [mostrarPerros, setMostrarPerros] = useState(false);
     }, [index]);
       
 
-    
+        const volverAEmpezar = () => {
+        arreglo = [
+        { raza: "Pastor alemán", página: "1" },
+        { raza: "Doberman", página: "1" },
+        { raza: "Boyero de berna", página: "1" },
+        { raza: "Rottweiler", página: "1" },
+        { raza: "Akita", página: "1" },
+        { raza: "San Bernardo", página: "1" },
+        { raza: "Terranova", página: "1" },
+        { raza: "Samoyedo", página: "1" },
+        { raza: "Labrador retriever", página: "1" },
+        { raza: "Golden retriever", página: "1" },
+        { raza: "Border collie", página: "1" },
+        { raza: "Pastor Collie", página: "1" },
+        { raza: "Siberian Husky", página: "1" },
+        { raza: "Bulldog Inglés", página: "1" },
+        { raza: "Cocker Spaniel", página: "1" },
+        { raza: "Bulldog francés", página: "1" },
+        { raza: "Beagle", página: "1" },
+        { raza: "Perro salchicha", página: "1" },
+        { raza: "Schnauzer", página: "1" },
+        { raza: "Yorkshire", página: "1" },
+        { raza: "Pomerania", página: "1" },
+        { raza: "Shih tzu", página: "1" },
+        { raza: "Pug", página: "1" }
+    ];
+        setMostrarPerros(false);
+        setIndex(0);
+    };
 
 
 return (
@@ -75,11 +103,11 @@ return (
         <Toolbar
             sx={{
                 display: "flex",
-                backgroundColor: "#45CF5E",
+                backgroundColor: "#2fb648",
                 color: "#000000",
                 textAlign: "center",
             }}>
-            <Typography variant="h4" component="div"> Personalidades Perrunas</Typography>
+            <Typography variant="h5" component="div" color="white"> Encuentra a tu peludito ideal </Typography>
             </Toolbar>
           
         
@@ -89,29 +117,43 @@ return (
         {mostrarPerros ? (
             <div>
                 <Resultado />
+                            <div>
+                <Button variant="outlined" onClick={volverAEmpezar}>
+                    Volver a empezar
+                </Button>
+            </div>
             </div>
         ) : (
             <Card sx={{ minWidth: 275, backgroundColor:"#E5FEEA" }}>
                 <CardHeader title={"Pregunta " + (index+1) + " de 6 "} />
-                    <CardContent>
-                        <Typography variant="body2" color="text.secondary">
-                            {pregunta.pregunta}
-                        </Typography>
-                        <br />
+                <CardContent>
+                    <Typography variant="body2" color="text.secondary">
+                        {pregunta.pregunta}
+                    </Typography>
+                    <br />
+                    <div style={{ display: "flex", flexWrap: "wrap" }}>
                         {pregunta.respuestas.map((respuesta) => (
-                            <Button  variant="outlined"  sx={{m:"20px"  ,color:"#45CF5E" ,borderColor:"#45CF5E"}}
+                            <Button
                                 key={respuesta.id}
-                                    onClick={() => seleccionar(respuesta.id)}
+                                variant="outlined"
+                                sx={{
+                                    m: "10px",
+                                    color: "#45CF5E",
+                                    borderColor: "#45CF5E",
+                                    width: "100%",
+                                    maxWidth: "300px",
+                                    flexGrow: 1,
+                                }}
+                                onClick={() => seleccionar(respuesta.id)}
                             >
                                 {respuesta.texto}
                             </Button>
-                            
                         ))}
-
+                    </div>
                 </CardContent>
             </Card>
-        )}
-     
+        )}       
+
     </div>
 
 )
@@ -126,8 +168,9 @@ const Resultado = () => {
 
     return (
         <div>
+            <br/>
             <div>
-                <h1>Perros que se acoplan a ti:</h1>
+                <Typography variant="h5">Perros que se acoplan a ti:</Typography>
                 <Flickity
                     className={'carousel'}
                     elementType={'div'}
@@ -143,6 +186,7 @@ const Resultado = () => {
                     disableImagesLoaded={false}
                     reloadOnUpdate
                     static
+                    sx={{ width: "100%", height: "100%" }}
                 >
                     {arreglo.map(({raza, página}) => (
                         <div key={raza} style={{ height: "500px", width:"400px"}}>
@@ -160,7 +204,7 @@ const Resultado = () => {
                         </div>
                     ))}
                 </Flickity>
-                            
+                        
 
             </div>
         </div>
